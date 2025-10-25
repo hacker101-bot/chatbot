@@ -10,22 +10,27 @@ function App() {
             []);
   return (
       <div className='app-container'>
-             <ChatInput
+
+            <div className='chat-messages-container'>
+                  {chatMessages.map((chatMessage) =>{
+
+                        return(
+                        
+                              <ChatMessage
+                              message={chatMessage.message}
+                              sender={chatMessage.sender}
+                              key={chatMessage.id}
+                              chatMessage={chatMessages}
+                              />
+                        )
+
+                  })}
+            </div>
+    
+           <ChatInput
       chatMessages={chatMessages}
       setChatMessages={setChatMessages}
     />
-      {chatMessages.map((chatMessage) =>{
-            return(
-                  <ChatMessage
-                        message={chatMessage.message}
-                        sender={chatMessage.sender}
-                        key={chatMessage.id}
-                        chatMessage={chatMessages}
-
-                  />
-            )
-
-      })}
       
       </div>
   )

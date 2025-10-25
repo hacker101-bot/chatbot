@@ -14,13 +14,13 @@ function ChatMessage({message,sender,chatMessages}){
         >
             {
                 sender === "robot" && 
-                (<img src={reactLogo} alt="" width="50" />
+                (<img className='chat-message-profile' src={reactLogo} alt=""  />
             )}
             <div className='chat-message-text'>
                 {message}
             </div>
             {(sender === "user") && 
-            (<img src={viteLogo} alt="" width="50" />)}
+            (<img className='chat-message-profile' src={viteLogo} alt="" />)}
         </div>
     )
 
