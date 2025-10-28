@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import Chatbot from './chatbot';
 import './App.css'
 
